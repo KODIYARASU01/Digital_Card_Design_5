@@ -15,6 +15,7 @@ import emailjs from "@emailjs/browser";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
 // import Carousel1 from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 //Carousel Testimonial
@@ -283,8 +284,22 @@ const NewCardDesign7 = () => {
           {/* Banner */}
 
           <div className="card7_box_1">
-            <img src={banner_img} alt="banner" />
-            <img src={avatar} alt="logo" />
+            <LazyLoadImage
+              className="image1"
+              src={banner_img}
+              alt="banner"
+              effect="blur"
+              placeholderSrc={banner_img}
+            />
+            {/* <img src={banner_img} loading="lazy" alt="banner" /> */}
+            <LazyLoadImage
+              className="image2"
+              src={avatar}
+              alt="avatar"
+              effect="blur"
+              placeholderSrc={avatar}
+            />
+            {/* <img src={avatar} loading="lazy" alt="logo" /> */}
           </div>
           {/* Basic Detail */}
 
@@ -480,49 +495,66 @@ const NewCardDesign7 = () => {
                     onClick={closeFullImage}
                   ></i>
                 </div>
+             
                 <img src={banner_img} alt="gallery" id="fullImage" />
               </div>
               <div className="col_1">
-                <img
+                <LazyLoadImage
                   src="https://plus.unsplash.com/premium_photo-1684783848257-daab2a974afd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbiUyMGluZmx1ZW5jZXJ8ZW58MHx8MHx8fDA%3D"
-                  alt="gall"
+                  alt="avatar"
+                  effect="blur"
+                  placeholderSrc="https://plus.unsplash.com/premium_photo-1684783848257-daab2a974afd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbiUyMGluZmx1ZW5jZXJ8ZW58MHx8MHx8fDA%3D"
                   onClick={(e) => openFullImage(e.target.src)}
                 />
-                <img
+                <LazyLoadImage
                   src="https://images.unsplash.com/photo-1577060663859-4db8f31dc1da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb24lMjBpbmZsdWVuY2VyfGVufDB8fDB8fHww"
-                  alt=""
+                  alt="avatar"
+                  effect="blur"
+                  placeholderSrc="https://images.unsplash.com/photo-1577060663859-4db8f31dc1da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb24lMjBpbmZsdWVuY2VyfGVufDB8fDB8fHww"
                   onClick={(e) => openFullImage(e.target.src)}
                 />
-                <img
+                <LazyLoadImage
                   src="https://images.unsplash.com/photo-1602742398695-745b5864dada?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb24lMjBpbmZsdWVuY2VyfGVufDB8fDB8fHww"
-                  alt=""
+                  alt="avatar"
+                  effect="blur"
+                  placeholderSrc="https://images.unsplash.com/photo-1602742398695-745b5864dada?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb24lMjBpbmZsdWVuY2VyfGVufDB8fDB8fHww"
                   onClick={(e) => openFullImage(e.target.src)}
                 />
               </div>
               <div className="col_2">
-                <img
+              <LazyLoadImage
                   src="https://images.unsplash.com/photo-1512068549487-5e79d74c7fc3?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
+                  alt="avatar"
+                  effect="blur"
+                  placeholderSrc="https://images.unsplash.com/photo-1512068549487-5e79d74c7fc3?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   onClick={(e) => openFullImage(e.target.src)}
                 />
+               
               </div>
 
               <div className="col_3">
-                <img
+              <LazyLoadImage
                   src="https://plus.unsplash.com/premium_photo-1684783848152-52135af8f0c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb24lMjBpbmZsdWVuY2VyfGVufDB8fDB8fHww"
-                  alt=""
+                  alt="avatar"
+                  effect="blur"
+                  placeholderSrc="https://plus.unsplash.com/premium_photo-1684783848152-52135af8f0c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb24lMjBpbmZsdWVuY2VyfGVufDB8fDB8fHww"
                   onClick={(e) => openFullImage(e.target.src)}
                 />
-                <img
+                 <LazyLoadImage
                   src="https://images.unsplash.com/photo-1511280303142-0051e93baeeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZmFzaGlvbiUyMGluZmx1ZW5jZXJ8ZW58MHx8MHx8fDA%3D"
-                  alt=""
+                  alt="avatar"
+                  effect="blur"
+                  placeholderSrc="https://images.unsplash.com/photo-1511280303142-0051e93baeeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZmFzaGlvbiUyMGluZmx1ZW5jZXJ8ZW58MHx8MHx8fDA%3D"
                   onClick={(e) => openFullImage(e.target.src)}
                 />
-                <img
+                   <LazyLoadImage
                   src="https://images.unsplash.com/photo-1563993297290-609c9406efcd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbiUyMGluZmx1ZW5jZXJ8ZW58MHx8MHx8fDA%3D"
-                  alt=""
+                  alt="avatar"
+                  effect="blur"
+                  placeholderSrc="https://images.unsplash.com/photo-1563993297290-609c9406efcd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbiUyMGluZmx1ZW5jZXJ8ZW58MHx8MHx8fDA%3D"
                   onClick={(e) => openFullImage(e.target.src)}
                 />
+               
               </div>
             </div>
           </div>
@@ -679,231 +711,228 @@ const NewCardDesign7 = () => {
               <h4>#&nbsp;FeedBack</h4>
             </div>
             <div className="feedback_container">
-         
-            
-         <form action="" onSubmit={feedbackFormik.handleSubmit}>
-       
-           <div className="form_group">
-             <label
-               htmlFor="clientName_Input"
-               className={`${
-                 feedbackFormik.errors.userName ? "error" : ""
-               } `}
-             >
-               {feedbackFormik.touched.userName &&
-               feedbackFormik.errors.userName
-                 ? feedbackFormik.errors.userName
-                 : "Your Name"}
-               <span>
-                 <sup>*</sup>
-               </span>
-             </label>
-             <input
-               type="text"
-               placeholder="Enter Your Name"
-               name="userName"
-               id="userName"
-               // value={userName}
-               // onChange={(e)=>setUserName(e.target.value)}
-               value={feedbackFormik.values.userName}
-               onChange={feedbackFormik.handleChange}
-               onBlur={feedbackFormik.handleBlur}
-             />
-           </div>
-           <div className="form_group">
-             <label
-               htmlFor="clientFeedBack_Input"
-               className={`${
-                 feedbackFormik.errors.userFeedback ? "error" : ""
-               } `}
-             >
-               {feedbackFormik.touched.userFeedback &&
-               feedbackFormik.errors.userFeedback
-                 ? feedbackFormik.errors.userFeedback
-                 : "Your FeedBack"}
-               <span>
-                 <sup>*</sup>
-               </span>
-             </label>
-             <textarea
-               id="userFeedback"
-               name="userFeedback"
-               cols="30"
-               rows="7"
-               placeholder="Enter your Feedback"
-               // value={userFeedback}
-               // onChange={(e)=>setUserFeedback(e.target.value)}
-               value={feedbackFormik.values.userFeedback}
-               onChange={feedbackFormik.handleChange}
-               onBlur={feedbackFormik.handleBlur}
-             ></textarea>
-           </div>
-           <div className="form_group">
-             <label
-               htmlFor="clientName_Input"
-               className={`${
-                 feedbackFormik.errors.currentRatting ? "error" : ""
-               } `}
-             >
-               {feedbackFormik.touched.currentRatting &&
-               feedbackFormik.errors.currentRatting
-                 ? feedbackFormik.errors.currentRatting
-                 : "Ratting"}
-               <span>
-                 <sup>*</sup>
-               </span>
-             </label>
-             <div
-               className="ratting_container"
-               data-rating="0"
-               name="currentRatting"
-               id="currentRatting"
-               onMouseOver={handleRatting}
-               onMouseLeave={removeRatting}
-               onClick={RattingSetted}
-               // value={currentRatting}
-               // onChange={(e)=>setCurrentRatting(e.target.value)}
-               value={feedbackFormik.values.currentRatting}
-               onChange={feedbackFormik.handleChange}
-               onBlur={feedbackFormik.handleBlur}
-             >
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="1"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="2"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="3"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="4"></i>
-               </span>
-               <span className="ratting_star">
-                 <i className="bx bxs-star star" data-rating="5"></i>
-               </span>
-             </div>
-           </div>
-           <div className="form_actions">
-             <button type="submit">
-               <img
-                 width="48"
-                 height="48"
-                 src="https://img.icons8.com/fluency/48/send-comment.png"
-                 alt="send-comment"
-               />
-               Send Feedback
-             </button>
-           </div>
-         </form>
-       </div>
-          {/* //Feedback messages */}
-          <div className="Feedback_container">
-                <div className="feeback_title">
-                  {commentOpen ? (
-                    <button onClick={() => setCommentOpen(false)}>
-                      <i className="uil uil-feedback"></i>
-                      Hide All Feedbacks
-                    </button>
-                  ) : (
-                    <button onClick={() => setCommentOpen(true)}>
-                      <i className="uil uil-feedback"></i>See All Feedbacks
-                    </button>
-                  )}
-
-                  {feedbackLoader ? (
-                    <span className="feedBack_loader"></span>
-                  ) : (
-                    ""
-                  )}
+              <form action="" onSubmit={feedbackFormik.handleSubmit}>
+                <div className="form_group">
+                  <label
+                    htmlFor="clientName_Input"
+                    className={`${
+                      feedbackFormik.errors.userName ? "error" : ""
+                    } `}
+                  >
+                    {feedbackFormik.touched.userName &&
+                    feedbackFormik.errors.userName
+                      ? feedbackFormik.errors.userName
+                      : "Your Name"}
+                    <span>
+                      <sup>*</sup>
+                    </span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter Your Name"
+                    name="userName"
+                    id="userName"
+                    // value={userName}
+                    // onChange={(e)=>setUserName(e.target.value)}
+                    value={feedbackFormik.values.userName}
+                    onChange={feedbackFormik.handleChange}
+                    onBlur={feedbackFormik.handleBlur}
+                  />
                 </div>
-
-                {commentOpen ? (
-                  <div className="comment_box">
-                    {AllFeedBacks.map((data, index) => {
-                      return (
-                        <div className="message" key={index}>
-                          <div className="user_detail">
-                            <div className="profile">
-                              <img src={profile} alt="profile" />
-                            </div>
-                            <div className="details">
-                              <div className="userName">
-                                <p>
-                                  {data.userName}
-                                  <i className="bx bxs-user-check"></i>
-                                </p>
-                              </div>
-                              <div className="stars">
-                                <div
-                                  className="ratting_container1"
-                                  data-rating={data.currentRatting}
-                                  name="currentRatting"
-                                  // id="currentRatting"
-                                  id={
-                                    data.currentRatting == 0
-                                      ? "noRatting"
-                                      : "" || data.currentRatting == 1
-                                      ? "singleRatting"
-                                      : "" || data.currentRatting == 2
-                                      ? "doubleRatting"
-                                      : "" || data.currentRatting == 3
-                                      ? "ThreeRatting"
-                                      : "" || data.currentRatting == 4
-                                      ? "fourRatting"
-                                      : "" || data.currentRatting == 5
-                                      ? "fullRatting"
-                                      : ""
-                                  }
-                                  value={data.currentRatting}
-                                >
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="1"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="2"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="3"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="4"
-                                    ></i>
-                                  </span>
-                                  <span className="ratting_star">
-                                    <i
-                                      className="bx bxs-star star1"
-                                      data-rating="5"
-                                    ></i>
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="comments">
-                            <i className="bx bx-chat"></i>
-                            <span>{data.userFeedback}</span>
-                          </div>
-                        </div>
-                      );
-                    })}
+                <div className="form_group">
+                  <label
+                    htmlFor="clientFeedBack_Input"
+                    className={`${
+                      feedbackFormik.errors.userFeedback ? "error" : ""
+                    } `}
+                  >
+                    {feedbackFormik.touched.userFeedback &&
+                    feedbackFormik.errors.userFeedback
+                      ? feedbackFormik.errors.userFeedback
+                      : "Your FeedBack"}
+                    <span>
+                      <sup>*</sup>
+                    </span>
+                  </label>
+                  <textarea
+                    id="userFeedback"
+                    name="userFeedback"
+                    cols="30"
+                    rows="7"
+                    placeholder="Enter your Feedback"
+                    // value={userFeedback}
+                    // onChange={(e)=>setUserFeedback(e.target.value)}
+                    value={feedbackFormik.values.userFeedback}
+                    onChange={feedbackFormik.handleChange}
+                    onBlur={feedbackFormik.handleBlur}
+                  ></textarea>
+                </div>
+                <div className="form_group">
+                  <label
+                    htmlFor="clientName_Input"
+                    className={`${
+                      feedbackFormik.errors.currentRatting ? "error" : ""
+                    } `}
+                  >
+                    {feedbackFormik.touched.currentRatting &&
+                    feedbackFormik.errors.currentRatting
+                      ? feedbackFormik.errors.currentRatting
+                      : "Ratting"}
+                    <span>
+                      <sup>*</sup>
+                    </span>
+                  </label>
+                  <div
+                    className="ratting_container"
+                    data-rating="0"
+                    name="currentRatting"
+                    id="currentRatting"
+                    onMouseOver={handleRatting}
+                    onMouseLeave={removeRatting}
+                    onClick={RattingSetted}
+                    // value={currentRatting}
+                    // onChange={(e)=>setCurrentRatting(e.target.value)}
+                    value={feedbackFormik.values.currentRatting}
+                    onChange={feedbackFormik.handleChange}
+                    onBlur={feedbackFormik.handleBlur}
+                  >
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="1"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="2"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="3"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="4"></i>
+                    </span>
+                    <span className="ratting_star">
+                      <i className="bx bxs-star star" data-rating="5"></i>
+                    </span>
                   </div>
+                </div>
+                <div className="form_actions">
+                  <button type="submit">
+                    <img
+                      width="48"
+                      height="48"
+                      src="https://img.icons8.com/fluency/48/send-comment.png"
+                      alt="send-comment"
+                    />
+                    Send Feedback
+                  </button>
+                </div>
+              </form>
+            </div>
+            {/* //Feedback messages */}
+            <div className="Feedback_container">
+              <div className="feeback_title">
+                {commentOpen ? (
+                  <button onClick={() => setCommentOpen(false)}>
+                    <i className="uil uil-feedback"></i>
+                    Hide All Feedbacks
+                  </button>
+                ) : (
+                  <button onClick={() => setCommentOpen(true)}>
+                    <i className="uil uil-feedback"></i>See All Feedbacks
+                  </button>
+                )}
+
+                {feedbackLoader ? (
+                  <span className="feedBack_loader"></span>
                 ) : (
                   ""
                 )}
               </div>
+
+              {commentOpen ? (
+                <div className="comment_box">
+                  {AllFeedBacks.map((data, index) => {
+                    return (
+                      <div className="message" key={index}>
+                        <div className="user_detail">
+                          <div className="profile">
+                            <img src={profile} alt="profile" />
+                          </div>
+                          <div className="details">
+                            <div className="userName">
+                              <p>
+                                {data.userName}
+                                <i className="bx bxs-user-check"></i>
+                              </p>
+                            </div>
+                            <div className="stars">
+                              <div
+                                className="ratting_container1"
+                                data-rating={data.currentRatting}
+                                name="currentRatting"
+                                // id="currentRatting"
+                                id={
+                                  data.currentRatting == 0
+                                    ? "noRatting"
+                                    : "" || data.currentRatting == 1
+                                    ? "singleRatting"
+                                    : "" || data.currentRatting == 2
+                                    ? "doubleRatting"
+                                    : "" || data.currentRatting == 3
+                                    ? "ThreeRatting"
+                                    : "" || data.currentRatting == 4
+                                    ? "fourRatting"
+                                    : "" || data.currentRatting == 5
+                                    ? "fullRatting"
+                                    : ""
+                                }
+                                value={data.currentRatting}
+                              >
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="1"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="2"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="3"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="4"
+                                  ></i>
+                                </span>
+                                <span className="ratting_star">
+                                  <i
+                                    className="bx bxs-star star1"
+                                    data-rating="5"
+                                  ></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="comments">
+                          <i className="bx bx-chat"></i>
+                          <span>{data.userFeedback}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
           {/* Inquries */}
           <div className="card7_box_11">
@@ -911,66 +940,76 @@ const NewCardDesign7 = () => {
               <h4>#&nbsp;Inquries</h4>
             </div>
             <div className="inquiries_container5">
-            
-            <form action="">
-              <div className="form_group">
-                <label htmlFor="name">
-                  Name <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <input type="text" placeholder="Your Name" />
-                  <i className='bx bxs-user-pin'></i>
+              <form action="">
+                <div className="form_group">
+                  <label htmlFor="name">
+                    Name <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <input type="text" placeholder="Your Name" />
+                    <i className="bx bxs-user-pin"></i>
+                  </div>
                 </div>
-              </div>
-              <div className="form_group">
-                <label htmlFor="email">
-                  Email <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <input type="email" placeholder="Your Email" />
-                  <i className='bx bxs-envelope' ></i>
+                <div className="form_group">
+                  <label htmlFor="email">
+                    Email <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <input type="email" placeholder="Your Email" />
+                    <i className="bx bxs-envelope"></i>
+                  </div>
                 </div>
-              </div>
-              <div className="form_group">
-                <label htmlFor="name">
-                  Phone <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <input type="tel" placeholder="Enter Phone Number" />
-                  <i className='bx bxs-phone-call' ></i>
+                <div className="form_group">
+                  <label htmlFor="name">
+                    Phone <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <input type="tel" placeholder="Enter Phone Number" />
+                    <i className="bx bxs-phone-call"></i>
+                  </div>
                 </div>
-              </div>
-              <div className="form_group">
-                <label htmlFor="name">
-                  Message <sup style={{ color: "red" }}>*</sup>
-                </label>
-                <div className="input">
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols="30"
-                    rows="5"
-                    placeholder="Enter Your Message Here..."
-                  ></textarea>
-    <i class='bx bxs-message-dots' ></i>
+                <div className="form_group">
+                  <label htmlFor="name">
+                    Message <sup style={{ color: "red" }}>*</sup>
+                  </label>
+                  <div className="input">
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="5"
+                      placeholder="Enter Your Message Here..."
+                    ></textarea>
+                    <i class="bx bxs-message-dots"></i>
+                  </div>
                 </div>
-              </div>
-              <div className="form_actions">
+                <div className="form_actions">
                   <button type="submit">
-                  <img width="48" height="48" src="https://img.icons8.com/fluency/48/submit-for-approval.png" alt="submit-for-approval"/>
-                   Submit
+                    <img
+                      width="48"
+                      height="48"
+                      src="https://img.icons8.com/fluency/48/submit-for-approval.png"
+                      alt="submit-for-approval"
+                    />
+                    Submit
                   </button>
                 </div>
-            </form>
+              </form>
+            </div>
           </div>
-            </div>
-            {/* Footer */}
-            <div className="card7_box_12">
+          {/* Footer */}
+          <div className="card7_box_12">
             <div className="footer_container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L21.8,250.7C43.6,245,87,235,131,218.7C174.5,203,218,181,262,165.3C305.5,149,349,139,393,149.3C436.4,160,480,192,524,202.7C567.3,213,611,203,655,208C698.2,213,742,235,785,208C829.1,181,873,107,916,96C960,85,1004,139,1047,186.7C1090.9,235,1135,277,1178,277.3C1221.8,277,1265,235,1309,229.3C1352.7,224,1396,256,1418,272L1440,288L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"></path></svg>
-                <p>All Copyright Reserved &copy; 2024 myvirtualcard.in</p>
-                </div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                  fill="#0099ff"
+                  fill-opacity="1"
+                  d="M0,256L21.8,250.7C43.6,245,87,235,131,218.7C174.5,203,218,181,262,165.3C305.5,149,349,139,393,149.3C436.4,160,480,192,524,202.7C567.3,213,611,203,655,208C698.2,213,742,235,785,208C829.1,181,873,107,916,96C960,85,1004,139,1047,186.7C1090.9,235,1135,277,1178,277.3C1221.8,277,1265,235,1309,229.3C1352.7,224,1396,256,1418,272L1440,288L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
+                ></path>
+              </svg>
+              <p>All Copyright Reserved &copy; 2024 myvirtualcard.in</p>
             </div>
+          </div>
         </div>
       </div>
     </>

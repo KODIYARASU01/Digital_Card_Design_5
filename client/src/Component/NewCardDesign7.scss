@@ -48,7 +48,7 @@
     justify-content: flex-start;
     margin-left: 1rem;
 
-    img{
+    .image1{
         width: 70%;
         height: 90%;
         object-fit:cover;
@@ -61,7 +61,7 @@
         width: 88%;
     }
     }
-    img:nth-child(2){
+    .image2{
         position: absolute;
         bottom: 0%;
         right: 20%;
