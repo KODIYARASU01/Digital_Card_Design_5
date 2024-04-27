@@ -32,6 +32,7 @@ import { useContext } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
+
 const NewCardDesign7 = () => {
   let [serviceLoad, setServiceLoad] = useState(false);
   console.log(serviceLoad);
@@ -276,7 +277,15 @@ const NewCardDesign7 = () => {
     let fullImageBox = document.getElementById("fullImageBox");
 
     fullImageBox.style.display = "none";
-  }
+  };
+    // Create a ref for the element you want to scroll to
+    const targetRef = useRef(null);
+
+    // Function to handle image click
+    const handleImageClick = () => {
+      // Scroll to the target element
+      targetRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
   return (
     <>
       <div className="newCard_design7_container">
@@ -618,11 +627,12 @@ const NewCardDesign7 = () => {
               <h4>#&nbsp;Products</h4>
             </div>
             <div className="product_container">
-              <div className="product_box">
+              <div className="product_box"  onClick={handleImageClick}>
                 <div className="product_image">
                   <img
                     src="https://images.unsplash.com/photo-1577060969681-e003a3f2af6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGZhc2hpb24lMjBpbmZsdWVuY2VyfGVufDB8fDB8fHww"
                     alt="product"
+                   
                   />
                 </div>
                 <div className="product_title">
@@ -635,11 +645,12 @@ const NewCardDesign7 = () => {
                   </small>
                 </div>
               </div>
-              <div className="product_box">
+              <div className="product_box" onClick={handleImageClick}>
                 <div className="product_image">
                   <img
                     src="https://media.istockphoto.com/id/1146921227/photo/young-woman-influencer-posing-for-social-media.webp?b=1&s=170667a&w=0&k=20&c=0bV65kVKIMhpsxwngDu-9PF-Ml_kUFZQFZbISGAxFLQ="
                     alt="product"
+                  
                   />
                 </div>
                 <div className="product_title">
@@ -652,7 +663,7 @@ const NewCardDesign7 = () => {
                   </small>
                 </div>
               </div>
-              <div className="product_box">
+              <div className="product_box"  onClick={handleImageClick}>
                 <div className="product_image">
                   <img
                     src="https://media.istockphoto.com/id/1135152732/photo/friends-posing-for-their-social-media-post-photo.webp?b=1&s=170667a&w=0&k=20&c=y2zopn64kheVafYtAOkmoHEBkApZYAy6N7VD2uEhAV4="
@@ -669,7 +680,7 @@ const NewCardDesign7 = () => {
                   </small>
                 </div>
               </div>
-              <div className="product_box">
+              <div className="product_box"  onClick={handleImageClick}>
                 <div className="product_image">
                   <img
                     src="https://media.istockphoto.com/id/1452785762/photo/woman-taking-selfie-on-staircase.webp?b=1&s=170667a&w=0&k=20&c=YRUucUn0dtSiUHIK1e33u1v8P_eh73ZWaph31A1zEfw="
@@ -935,7 +946,7 @@ const NewCardDesign7 = () => {
             </div>
           </div>
           {/* Inquries */}
-          <div className="card7_box_11">
+          <div className="card7_box_11" ref={targetRef}>
             <div className="inquries_title">
               <h4>#&nbsp;Inquries</h4>
             </div>
